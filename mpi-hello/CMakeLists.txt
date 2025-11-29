@@ -6,7 +6,7 @@ SET(TARGET_SRC main.cc)
 
 # Usually, you will not need to modify anything beyond this point...
 
-cmake_minimum_required(VERSION 3.2)
+cmake_minimum_required(VERSION 3.5)
 
 project(${TARGET})
 
