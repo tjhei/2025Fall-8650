@@ -1,4 +1,12 @@
-// very simple MPI demo
+/* Consider an MPI parallel program running on K ranks with an array of N strings split evenly between
+the K ranks (each rank only knows its own part). You may assume there are no duplicates, even
+between different ranks.
+(a) All ranks call a function “find owner of(X)“ that returns (on all ranks!) the integer (between 0
+and K-1) of the unique rank who has this string X in their array. Assume it exists on exactly
+one rank. Detail the necessary steps for an efficient implementation of this function including
+communication (be precise about who sends/receives what!).
+*/
+
 // compile using "mpicxx main.cc" and run with
 // "mpirun -n 3 ./main"
 
@@ -7,7 +15,6 @@
 #include <algorithm>
 #include <cstddef>
 #include <iostream>
-#include <iterator>
 #include <numeric>
 #include <vector>
 #include <random>
